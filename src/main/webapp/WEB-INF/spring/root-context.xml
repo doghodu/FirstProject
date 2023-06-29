@@ -36,4 +36,5 @@
 	</bean>
 	<mybatis-spring:scan
 		base-package="com.board.mapper"></mybatis-spring:scan>
+
 </beans>

@@ -15,4 +15,13 @@
  			ID = #{id}
  			AND PASSWORD = #{password}
 	</select>
+	
+	<insert id = "register">
+		INSERT INTO MEMBER(	ID
+							  , PASSWORD
+							  , NAME )				
+					  VALUES(  	#{id}
+					  		  , #{password}
+					  		  , #{name})
+	</insert>
 </mapper>

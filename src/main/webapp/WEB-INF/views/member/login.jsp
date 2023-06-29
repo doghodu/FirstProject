@@ -65,7 +65,7 @@
             <div>ID : <input type="text" class="form-control" id="id" name="id" placeholder="ID"></div>
             <div>PW : <input type="password" class="form-control" id="password" name="password" placeholder="PassWord" required></div>
             <button class="btn btn-lg btn-primary btn-block" type="button" onclick="fn_login();">ログイン</button>
-            <button class="btn btn-lg btn-primary btn-block" type="button" onclick='location.href="/member/join"'>会員登録</button>
+            <button class="btn btn-lg btn-primary btn-block" type="button" onclick='location.href="/member/register"'>会員登録</button>
         </form>
     </div>
 </body>
