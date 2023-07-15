@@ -1,11 +1,10 @@
 package com.board.dao;
 
-import java.util.List;
 import javax.inject.Inject;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.board.domain.BoardDTO;
 import com.board.domain.MemberDTO;
 
 @Repository
@@ -21,8 +20,11 @@ public class MemberDAOImpl implements MemberDAO {
 		return sqlSession.selectOne(namespace+".login", dto);
 	}
 	
-	@Override
-	public void register(MemberDTO dto) throws Exception{
-		sqlSession.insert(namespace+".register", dto);
-	}
+	
+	
+	  
+	@Override public int register(MemberDTO dto) { 
+		return sqlSession.insert(namespace+".register", dto); }
+	  
+	 
 }

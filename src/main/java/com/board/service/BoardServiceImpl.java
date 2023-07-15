@@ -20,10 +20,10 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public int regi(BoardDTO dto) throws Exception {
 		
-		if (dao.getMaxSeq() == null) { // 掲示文が存在しない時
-			dto.setSeq(1); // SEQは 1
-		} else { // 掲示文が存在する時
-			dto.setSeq(dao.getMaxSeq() + 1); // 最大値+1
+		if (dao.getMaxSeq() == null) { 
+			dto.setSeq(1); 
+		} else { 
+			dto.setSeq(dao.getMaxSeq() + 1); 
 		}
 		
 		return dao.regi(dto);

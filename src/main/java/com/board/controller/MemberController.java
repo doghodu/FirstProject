@@ -1,5 +1,7 @@
 package com.board.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 import javax.inject.Inject;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.board.domain.BoardDTO;
 import com.board.domain.MemberDTO;
 import com.board.service.MemberService;
 
@@ -30,7 +33,7 @@ public class MemberController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/member/login", method = RequestMethod.POST)
-	public  String regi(Locale locale, Model model, MemberDTO dto, HttpSession session) throws Exception { 
+	public  String login(Locale locale, Model model, MemberDTO dto, HttpSession session) throws Exception { 
 		
 		MemberDTO dto2 = service.login(dto);
 		
@@ -41,17 +44,20 @@ public class MemberController {
 			return "N";
 		}
 	}
-	
-	@RequestMapping(value = "/member/register", method = RequestMethod.GET)
-	public void getRegister() throws Exception{
-		logger.info("get register");
+	@RequestMapping(value = "/member/registerView", method = RequestMethod.GET)
+	public String registerView(Locale locale, Model model) throws Exception {
+		return "/member/register";
 	}
 	
+	@ResponseBody
 	@RequestMapping(value = "/member/register", method = RequestMethod.POST)
-	public String postRegister(MemberDTO dto) throws Exception{
-		logger.info("post register");
-		
-		service.register(dto);
-		return null;
+	public  String register(Locale locale, Model model, MemberDTO dto) throws Exception {
+	
+		if(service.register(dto) == 1) {
+			return "Y";
+		}else {
+			return "N";
+		}
 	}
+	
 }

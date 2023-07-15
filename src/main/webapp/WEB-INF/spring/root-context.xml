@@ -17,10 +17,8 @@
 			name="driverClassName" />
 		<property value="jdbc:oracle:thin:@localhost:1521:orcl"
 			name="url" />
-		<!-- 오라클 사용자 이름 -->
 		<property value="system" name="username" />
-		<!-- 오라클 사용자 비밀번호 -->
-		<property value="Tls03300" name="password" />
+		<property value="Tls0330!!" name="password" />
 	</bean>
 
 	<bean class="org.mybatis.spring.SqlSessionFactoryBean"

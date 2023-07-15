@@ -6,7 +6,9 @@ public interface MemberService {
 
 	MemberDTO login(MemberDTO dto);
 
-	public void register(MemberDTO dto) throws Exception;
+	public int register(MemberDTO dto) throws Exception;
+
+	
 
 
 }

@@ -6,6 +6,9 @@ public interface MemberDAO {
 
 	MemberDTO login(MemberDTO dto);
 
-	public void register(MemberDTO dto) throws Exception;
+	int register(MemberDTO dto);
+
+	
+
 
 }
