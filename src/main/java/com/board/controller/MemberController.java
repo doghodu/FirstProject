@@ -1,4 +1,4 @@
-package com.board.controller;
+	package com.board.controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -26,7 +26,7 @@ public class MemberController {
 	@Inject
 	 private MemberService service;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET) //
 	public String login(Locale locale, Model model) {	
 		return "/member/login";
 	}

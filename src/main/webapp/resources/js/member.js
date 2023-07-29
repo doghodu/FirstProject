@@ -31,7 +31,7 @@ function fn_Register(){
 		success: function(data){
 			if(data == "Y"){
 				alert("登録が完了しました.");
-				location.href = "http://localhost:8080/";		
+				location.href = "/board/home";		
 			}else{
 				alert("登録が失敗しました。.");
 			}
