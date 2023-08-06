@@ -5,26 +5,26 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.board.domain.MemberDTO;
+import com.board.domain.ManagerDTO;
+
 
 @Repository
-public class MemberDAOImpl implements MemberDAO {
+public class ManagerDAOImpl implements ManagerDAO{
 	
 	@Inject
 	private SqlSession sqlSession;
 	
-	private static String namespace = "crd.mappers.member";
+	private static String namespace = "com.board.mappers.manager";
 
 	@Override
-	public MemberDTO login(MemberDTO dto) {
+	public ManagerDTO login(ManagerDTO dto) {
 		return sqlSession.selectOne(namespace+".login", dto);
 	}
 	
 	
 	
 	  
-	@Override public int register(MemberDTO dto) { 
+	@Override public int register(ManagerDTO dto) { 
 		return sqlSession.insert(namespace+".register", dto); }
 	  
-	 
 }

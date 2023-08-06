@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-		<script src="${path}/resources/js/member.js"></script>
+		<script src="${path}/resources/js/manager.js"></script>
 		<title>会員登録</title>
 	</head>
 	<script type="text/javascript">
@@ -52,7 +52,7 @@
 					<input class="form-control" type="text" id="name" name="name" />
 				</div>
 				<div class="form-group has-feedback">
-					<button class="btn btn-success" type="button" onclick="fn_memberRegister();">会員登録</button>
+					<button class="btn btn-success" type="button" onclick="fn_managerRegister();">会員登録</button>
 					<!-- <button class="cencle btn btn-danger" type="button">取消し</button> -->
 				</div>
 			</form>

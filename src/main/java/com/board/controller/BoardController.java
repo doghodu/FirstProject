@@ -22,6 +22,7 @@ import com.board.service.BoardService;
 @RequestMapping(value="/board/*")
 public class BoardController {
 	
+
 	 @Inject
 	 private BoardService service;
 	

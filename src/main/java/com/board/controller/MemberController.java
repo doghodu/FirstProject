@@ -1,7 +1,4 @@
-	package com.board.controller;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
+package com.board.controller;
 import java.util.Locale;
 
 import javax.inject.Inject;
@@ -15,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.board.domain.BoardDTO;
 import com.board.domain.MemberDTO;
 import com.board.service.MemberService;
 
@@ -28,7 +24,7 @@ public class MemberController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET) //
 	public String login(Locale locale, Model model) {	
-		return "/member/login";
+		return "/board/main";
 	}
 	
 	@ResponseBody
@@ -44,6 +40,12 @@ public class MemberController {
 			return "N";
 		}
 	}
+	
+	@RequestMapping(value = "/member/loginView", method = RequestMethod.GET)
+	public String loginView(Locale locale, Model model) throws Exception {
+		return "/member/login";
+	}
+	
 	@RequestMapping(value = "/member/registerView", method = RequestMethod.GET)
 	public String registerView(Locale locale, Model model) throws Exception {
 		return "/member/register";
